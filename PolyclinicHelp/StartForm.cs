@@ -10,6 +10,8 @@ namespace PolyclinicHelp
             InitializeComponent();
         }
 
+        public DataGridView PolyclinicHelpView { get => polyclinicHelpView; private set => polyclinicHelpView = value; }
+
         private void QuitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
@@ -39,26 +41,21 @@ namespace PolyclinicHelp
 
                         while (!fieldParser.EndOfData)
                         {
-                            Shared.List.Add(new Polyclinic(fieldParser.ReadFields()));
+                            Shared.List.Add(new Clinic(fieldParser.ReadFields()));
                         }
                     }
                     else
                         // ToDo: Уточнить тип исключения и ловить его!
                         throw new Exception();
 
-                    PolyclinicHelpView.DataSource = Shared.List;
+                    polyclinicHelpView.DataSource = Shared.List;
                 }
             }
         }
 
         private void SettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new SettingsForm().Show();
-        }
-
-        private void CheckBox1_CheckedChanged(object sender, System.EventArgs e)
-        {
-
+            new SettingsForm(this).Show();
         }
     }
 }

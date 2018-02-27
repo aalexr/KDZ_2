@@ -62,9 +62,9 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.опрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.PolyclinicHelpView = new System.Windows.Forms.DataGridView();
+            this.polyclinicHelpView = new System.Windows.Forms.DataGridView();
             this.menuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PolyclinicHelpView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.polyclinicHelpView)).BeginInit();
             this.SuspendLayout();
             // 
             // newToolStripMenuItem
@@ -128,54 +128,52 @@
             this.создатьToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("создатьToolStripMenuItem.Image")));
             this.создатьToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.создатьToolStripMenuItem.Name = "создатьToolStripMenuItem";
-            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.создатьToolStripMenuItem.Text = "&Создать";
-            this.создатьToolStripMenuItem.Visible = false;
             // 
             // открытьToolStripMenuItem
             // 
             this.открытьToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("открытьToolStripMenuItem.Image")));
             this.открытьToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.открытьToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.открытьToolStripMenuItem.Text = "&Открыть";
             this.открытьToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(150, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(161, 6);
             // 
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("сохранитьToolStripMenuItem.Image")));
             this.сохранитьToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.сохранитьToolStripMenuItem.Text = "&Сохранить";
-            this.сохранитьToolStripMenuItem.Visible = false;
             // 
             // сохранитькакToolStripMenuItem
             // 
             this.сохранитькакToolStripMenuItem.Name = "сохранитькакToolStripMenuItem";
-            this.сохранитькакToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.сохранитькакToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.сохранитькакToolStripMenuItem.Text = "Сохранить &как";
-            this.сохранитькакToolStripMenuItem.Visible = false;
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(150, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(161, 6);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(150, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(161, 6);
             // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.выходToolStripMenuItem.Text = "Вы&ход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.QuitToolStripMenuItem_Click);
             // 
@@ -193,7 +191,6 @@
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.editToolStripMenuItem.Text = "&Правка";
-            this.editToolStripMenuItem.Visible = false;
             // 
             // отменадействияToolStripMenuItem
             // 
@@ -263,7 +260,7 @@
             // параметрыToolStripMenuItem
             // 
             this.параметрыToolStripMenuItem.Name = "параметрыToolStripMenuItem";
-            this.параметрыToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.параметрыToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.параметрыToolStripMenuItem.Text = "&Параметры";
             this.параметрыToolStripMenuItem.Click += new System.EventHandler(this.SettingsToolStripMenuItem_Click);
             // 
@@ -278,7 +275,6 @@
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.helpToolStripMenuItem.Text = "Спра&вка";
-            this.helpToolStripMenuItem.Visible = false;
             // 
             // содержаниеToolStripMenuItem
             // 
@@ -313,8 +309,8 @@
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.toolsToolStripMenuItem,
             this.editToolStripMenuItem,
+            this.toolsToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -323,19 +319,18 @@
             // 
             // PolyclinicHelpView
             // 
-            this.PolyclinicHelpView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.PolyclinicHelpView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PolyclinicHelpView.Location = new System.Drawing.Point(0, 24);
-            this.PolyclinicHelpView.Name = "PolyclinicHelpView";
-            this.PolyclinicHelpView.Size = new System.Drawing.Size(384, 238);
-            this.PolyclinicHelpView.TabIndex = 1;
+            this.polyclinicHelpView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.polyclinicHelpView.Location = new System.Drawing.Point(0, 24);
+            this.polyclinicHelpView.Name = "PolyclinicHelpView";
+            this.polyclinicHelpView.Size = new System.Drawing.Size(384, 238);
+            this.polyclinicHelpView.TabIndex = 1;
             // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 262);
-            this.Controls.Add(this.PolyclinicHelpView);
+            this.Controls.Add(this.polyclinicHelpView);
             this.Controls.Add(this.menuStrip);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MainMenuStrip = this.menuStrip;
@@ -345,7 +340,7 @@
             this.Text = "Form1";
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PolyclinicHelpView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.polyclinicHelpView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -386,7 +381,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem опрограммеToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.DataGridView PolyclinicHelpView;
+        private System.Windows.Forms.DataGridView polyclinicHelpView;
     }
 }
 
