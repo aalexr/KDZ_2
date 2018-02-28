@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PolyclinicHelp
+﻿namespace PolyclinicHelp
 {
     public class Address
     {

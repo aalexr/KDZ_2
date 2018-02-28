@@ -10,12 +10,9 @@ namespace PolyclinicHelp
             InitializeComponent();
         }
 
-        public DataGridView PolyclinicHelpView { get => polyclinicHelpView; private set => polyclinicHelpView = value; }
+        public DataGridView ClinicView { get => сlinicView; private set => сlinicView = value; }
 
-        private void QuitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+        private void QuitToolStripMenuItem_Click(object sender, EventArgs e) => Close();
 
         private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -48,14 +45,11 @@ namespace PolyclinicHelp
                         // ToDo: Уточнить тип исключения и ловить его!
                         throw new Exception();
 
-                    polyclinicHelpView.DataSource = Shared.List;
+                    сlinicView.DataSource = Shared.List;
                 }
             }
         }
 
-        private void SettingsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new SettingsForm(this).Show();
-        }
+        private void ShowHideToolStripMenuItem_Click(object sender, EventArgs e) => new SettingsForm(this).Show();
     }
 }
