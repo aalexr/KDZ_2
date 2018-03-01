@@ -42,7 +42,6 @@
             this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сохранитькакToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отменадействияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -111,7 +110,6 @@
             this.сохранитьToolStripMenuItem,
             this.сохранитькакToolStripMenuItem,
             this.toolStripSeparator1,
-            this.toolStripSeparator2,
             this.выходToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
@@ -158,11 +156,6 @@
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(161, 6);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(161, 6);
             // 
             // выходToolStripMenuItem
             // 
@@ -271,6 +264,7 @@
             // 
             // сlinicView
             // 
+            this.сlinicView.AllowUserToOrderColumns = true;
             this.сlinicView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.сlinicView.Location = new System.Drawing.Point(0, 24);
             this.сlinicView.Name = "сlinicView";
@@ -313,7 +307,6 @@
         private System.Windows.Forms.ToolStripMenuItem сохранитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem сохранитькакToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отменадействияToolStripMenuItem;
@@ -325,9 +318,9 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem выделитьвсеToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.DataGridView сlinicView;
         private System.Windows.Forms.ToolStripMenuItem видToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem параметрыToolStripMenuItem;
+        private System.Windows.Forms.DataGridView сlinicView;
     }
 }
 

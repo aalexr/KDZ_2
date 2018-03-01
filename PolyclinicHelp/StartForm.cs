@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using PolyclinicHelp.Properties;
 
 namespace PolyclinicHelp
 {
@@ -15,10 +16,11 @@ namespace PolyclinicHelp
         private void QuitToolStripMenuItem_Click(object sender, EventArgs e) => Close();
 
         private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (OpenFileDialog openDialog = new OpenFileDialog
+        {   
+            Shared.List.Clear();
+            using (var openDialog = new OpenFileDialog
             {
-                Filter = "CSV | *.csv"
+                Filter = Resources.StartForm_OpenToolStripMenuItem_Click_CSV_____csv
             })
             {
                 if (openDialog.ShowDialog() != DialogResult.OK)

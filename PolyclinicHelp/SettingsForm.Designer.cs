@@ -51,7 +51,7 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.ShowContent);
             this.Name = "SettingsForm";
-            this.Text = "SettingsForm";
+            this.Text = "Столбцы";
             this.Load += new System.EventHandler(this.SettingsForm_Load);
             this.ResumeLayout(false);
 
