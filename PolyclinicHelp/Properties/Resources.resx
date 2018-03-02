@@ -117,4 +117,7 @@
   <data name="StartForm_OpenToolStripMenuItem_Click_CSV_____csv" xml:space="preserve">
     <value>CSV | *.csv</value>
   </data>
+  <data name="StartForm_SaveAsToolStripMenuItem_Click_Таблица_CSV_____csv" xml:space="preserve">
+    <value>Таблица CSV | *.csv</value>
+  </data>
 </root>

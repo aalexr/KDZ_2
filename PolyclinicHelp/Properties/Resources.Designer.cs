@@ -68,5 +68,14 @@ namespace PolyclinicHelp.Properties {
                 return ResourceManager.GetString("StartForm_OpenToolStripMenuItem_Click_CSV_____csv", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Таблица CSV | *.csv.
+        /// </summary>
+        internal static string StartForm_SaveAsToolStripMenuItem_Click_Таблица_CSV_____csv {
+            get {
+                return ResourceManager.GetString("StartForm_SaveAsToolStripMenuItem_Click_Таблица_CSV_____csv", resourceCulture);
+            }
+        }
     }
 }
