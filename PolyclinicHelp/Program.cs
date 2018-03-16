@@ -1,6 +1,6 @@
 ﻿namespace PolyclinicHelp
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// Главная точка входа для приложения.

@@ -31,51 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.сохранитькакToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отменадействияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отменадействияToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.cutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.выделитьвсеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ShowHideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сlinicView = new System.Windows.Forms.DataGridView();
-            this.rownum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shortName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.postalCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chiefName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chiefPosition = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chiefGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chiefPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.publicPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.closeFlag = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.closeReason = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.closeDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reopenDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paidServicesInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.freeServicesInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.workingHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clarificationOfWorkingHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.specialization = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.beneficialDrugPrescriptions = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.extraInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressUnom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.globalid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clinicBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
@@ -88,161 +54,118 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.rowShowNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.clinicSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rownumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shortNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.postalCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chiefNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chiefPositionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chiefGenderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chiefPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.publicPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.faxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.closeFlagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.closeReasonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.closeDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reopenDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paidServicesInfoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.freeServicesInfoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.workingHoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clarificationOfWorkingHoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.specializationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.beneficialDrugPrescriptionsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.extraInfoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressUnomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.globalidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.closeFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.сlinicView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clinicBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator)).BeginInit();
             this.bindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rowShowNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clinicSource)).BeginInit();
             this.SuspendLayout();
             // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.создатьToolStripMenuItem,
-            this.открытьToolStripMenuItem,
+            this.newToolStripMenuItem,
+            this.openToolStripMenuItem,
             this.toolStripSeparator,
-            this.сохранитьToolStripMenuItem,
-            this.сохранитькакToolStripMenuItem,
+            this.saveToolStripMenuItem,
+            this.saveAsToolStripMenuItem,
             this.toolStripSeparator1,
-            this.выходToolStripMenuItem});
+            this.closeFileToolStripMenuItem,
+            this.quitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.fileToolStripMenuItem.Text = "&Файл";
             // 
-            // создатьToolStripMenuItem
+            // newToolStripMenuItem
             // 
-            this.создатьToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("создатьToolStripMenuItem.Image")));
-            this.создатьToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.создатьToolStripMenuItem.Name = "создатьToolStripMenuItem";
-            this.создатьToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.создатьToolStripMenuItem.Text = "&Создать";
-            this.создатьToolStripMenuItem.Click += new System.EventHandler(this.NewToolStripMenuItem_Click);
+            this.newToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripMenuItem.Image")));
+            this.newToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+            this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.newToolStripMenuItem.Text = "&Создать";
+            this.newToolStripMenuItem.Click += new System.EventHandler(this.FileOpenedOrCreated);
             // 
-            // открытьToolStripMenuItem
+            // openToolStripMenuItem
             // 
-            this.открытьToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("открытьToolStripMenuItem.Image")));
-            this.открытьToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.открытьToolStripMenuItem.Text = "&Открыть";
-            this.открытьToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
+            this.openToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripMenuItem.Image")));
+            this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.openToolStripMenuItem.Text = "&Открыть";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
             this.toolStripSeparator.Size = new System.Drawing.Size(222, 6);
             // 
-            // сохранитьToolStripMenuItem
+            // saveToolStripMenuItem
             // 
-            this.сохранитьToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("сохранитьToolStripMenuItem.Image")));
-            this.сохранитьToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.сохранитьToolStripMenuItem.Text = "&Сохранить";
+            this.saveToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripMenuItem.Image")));
+            this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.saveToolStripMenuItem.Text = "&Сохранить";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
-            // сохранитькакToolStripMenuItem
+            // saveAsToolStripMenuItem
             // 
-            this.сохранитькакToolStripMenuItem.Name = "сохранитькакToolStripMenuItem";
-            this.сохранитькакToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
+            this.saveAsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.S)));
-            this.сохранитькакToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.сохранитькакToolStripMenuItem.Text = "Сохранить &как";
-            this.сохранитькакToolStripMenuItem.Click += new System.EventHandler(this.SaveAsToolStripMenuItem_Click);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.saveAsToolStripMenuItem.Text = "Сохранить &как";
+            this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.SaveAsToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(222, 6);
             // 
-            // выходToolStripMenuItem
+            // quitToolStripMenuItem
             // 
-            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.выходToolStripMenuItem.Text = "Вы&ход";
-            this.выходToolStripMenuItem.Click += new System.EventHandler(this.QuitToolStripMenuItem_Click);
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.отменадействияToolStripMenuItem,
-            this.отменадействияToolStripMenuItem1,
-            this.toolStripSeparator3,
-            this.cutToolStripMenuItem,
-            this.copyToolStripMenuItem,
-            this.pasteToolStripMenuItem,
-            this.toolStripSeparator4,
-            this.выделитьвсеToolStripMenuItem});
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.editToolStripMenuItem.Text = "&Правка";
-            // 
-            // отменадействияToolStripMenuItem
-            // 
-            this.отменадействияToolStripMenuItem.Name = "отменадействияToolStripMenuItem";
-            this.отменадействияToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-            this.отменадействияToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.отменадействияToolStripMenuItem.Text = "&Отмена действия";
-            // 
-            // отменадействияToolStripMenuItem1
-            // 
-            this.отменадействияToolStripMenuItem1.Name = "отменадействияToolStripMenuItem1";
-            this.отменадействияToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
-            this.отменадействияToolStripMenuItem1.Size = new System.Drawing.Size(209, 22);
-            this.отменадействияToolStripMenuItem1.Text = "&Отмена действия";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(206, 6);
-            // 
-            // cutToolStripMenuItem
-            // 
-            this.cutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cutToolStripMenuItem.Image")));
-            this.cutToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
-            this.cutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.cutToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.cutToolStripMenuItem.Text = "Вырезат&ь";
-            // 
-            // copyToolStripMenuItem
-            // 
-            this.copyToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("copyToolStripMenuItem.Image")));
-            this.copyToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            this.copyToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.copyToolStripMenuItem.Text = "&Копировать";
-            // 
-            // pasteToolStripMenuItem
-            // 
-            this.pasteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("pasteToolStripMenuItem.Image")));
-            this.pasteToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
-            this.pasteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.pasteToolStripMenuItem.Text = "Вст&авка";
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(206, 6);
-            // 
-            // выделитьвсеToolStripMenuItem
-            // 
-            this.выделитьвсеToolStripMenuItem.Name = "выделитьвсеToolStripMenuItem";
-            this.выделитьвсеToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.выделитьвсеToolStripMenuItem.Text = "Выделить &все";
+            this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+            this.quitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.quitToolStripMenuItem.Text = "Вы&ход";
+            this.quitToolStripMenuItem.Click += new System.EventHandler(this.QuitToolStripMenuItem_Click);
             // 
             // menuStrip
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.viewToolStripMenuItem,
-            this.editToolStripMenuItem});
+            this.viewToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(606, 24);
@@ -272,212 +195,43 @@
             this.сlinicView.AutoGenerateColumns = false;
             this.сlinicView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.сlinicView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.rownum,
-            this.shortName,
-            this.postalCode,
-            this.address,
-            this.chiefName,
-            this.chiefPosition,
-            this.chiefGender,
-            this.chiefPhone,
-            this.publicPhone,
-            this.fax,
-            this.email,
-            this.closeFlag,
-            this.closeReason,
-            this.closeDate,
-            this.reopenDate,
-            this.paidServicesInfo,
-            this.freeServicesInfo,
-            this.workingHours,
-            this.clarificationOfWorkingHours,
-            this.specialization,
-            this.beneficialDrugPrescriptions,
-            this.extraInfo,
-            this.addressUnom,
-            this.globalid});
-            this.сlinicView.DataSource = this.clinicBindingSource;
+            this.rownumDataGridViewTextBoxColumn,
+            this.shortNameDataGridViewTextBoxColumn,
+            this.postalCodeDataGridViewTextBoxColumn,
+            this.addressDataGridViewTextBoxColumn,
+            this.chiefNameDataGridViewTextBoxColumn,
+            this.chiefPositionDataGridViewTextBoxColumn,
+            this.chiefGenderDataGridViewTextBoxColumn,
+            this.chiefPhoneDataGridViewTextBoxColumn,
+            this.publicPhoneDataGridViewTextBoxColumn,
+            this.faxDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.closeFlagDataGridViewTextBoxColumn,
+            this.closeReasonDataGridViewTextBoxColumn,
+            this.closeDateDataGridViewTextBoxColumn,
+            this.reopenDateDataGridViewTextBoxColumn,
+            this.paidServicesInfoDataGridViewTextBoxColumn,
+            this.freeServicesInfoDataGridViewTextBoxColumn,
+            this.workingHoursDataGridViewTextBoxColumn,
+            this.clarificationOfWorkingHoursDataGridViewTextBoxColumn,
+            this.specializationDataGridViewTextBoxColumn,
+            this.beneficialDrugPrescriptionsDataGridViewTextBoxColumn,
+            this.extraInfoDataGridViewTextBoxColumn,
+            this.addressUnomDataGridViewTextBoxColumn,
+            this.globalidDataGridViewTextBoxColumn});
+            this.сlinicView.DataSource = this.clinicSource;
             this.сlinicView.Location = new System.Drawing.Point(0, 52);
             this.сlinicView.Name = "сlinicView";
             this.сlinicView.Size = new System.Drawing.Size(606, 311);
             this.сlinicView.TabIndex = 1;
-            // 
-            // rownum
-            // 
-            this.rownum.DataPropertyName = "Rownum";
-            this.rownum.HeaderText = "Rownum";
-            this.rownum.Name = "rownum";
-            this.rownum.ReadOnly = true;
-            // 
-            // shortName
-            // 
-            this.shortName.DataPropertyName = "ShortName";
-            this.shortName.HeaderText = "ShortName";
-            this.shortName.Name = "shortName";
-            this.shortName.ReadOnly = true;
-            // 
-            // postalCode
-            // 
-            this.postalCode.DataPropertyName = "PostalCode";
-            this.postalCode.HeaderText = "PostalCode";
-            this.postalCode.Name = "postalCode";
-            this.postalCode.ReadOnly = true;
-            // 
-            // address
-            // 
-            this.address.DataPropertyName = "Address";
-            this.address.HeaderText = "Address";
-            this.address.Name = "address";
-            this.address.ReadOnly = true;
-            // 
-            // chiefName
-            // 
-            this.chiefName.DataPropertyName = "ChiefName";
-            this.chiefName.HeaderText = "ChiefName";
-            this.chiefName.Name = "chiefName";
-            this.chiefName.ReadOnly = true;
-            // 
-            // chiefPosition
-            // 
-            this.chiefPosition.DataPropertyName = "ChiefPosition";
-            this.chiefPosition.HeaderText = "ChiefPosition";
-            this.chiefPosition.Name = "chiefPosition";
-            this.chiefPosition.ReadOnly = true;
-            // 
-            // chiefGender
-            // 
-            this.chiefGender.DataPropertyName = "ChiefGender";
-            this.chiefGender.HeaderText = "ChiefGender";
-            this.chiefGender.Name = "chiefGender";
-            this.chiefGender.ReadOnly = true;
-            // 
-            // chiefPhone
-            // 
-            this.chiefPhone.DataPropertyName = "ChiefPhone";
-            this.chiefPhone.HeaderText = "ChiefPhone";
-            this.chiefPhone.Name = "chiefPhone";
-            this.chiefPhone.ReadOnly = true;
-            // 
-            // publicPhone
-            // 
-            this.publicPhone.DataPropertyName = "PublicPhone";
-            this.publicPhone.HeaderText = "PublicPhone";
-            this.publicPhone.Name = "publicPhone";
-            this.publicPhone.ReadOnly = true;
-            // 
-            // fax
-            // 
-            this.fax.DataPropertyName = "Fax";
-            this.fax.HeaderText = "Fax";
-            this.fax.Name = "fax";
-            this.fax.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "Email";
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            // 
-            // closeFlag
-            // 
-            this.closeFlag.DataPropertyName = "CloseFlag";
-            this.closeFlag.HeaderText = "CloseFlag";
-            this.closeFlag.Name = "closeFlag";
-            this.closeFlag.ReadOnly = true;
-            // 
-            // closeReason
-            // 
-            this.closeReason.DataPropertyName = "CloseReason";
-            this.closeReason.HeaderText = "CloseReason";
-            this.closeReason.Name = "closeReason";
-            this.closeReason.ReadOnly = true;
-            // 
-            // closeDate
-            // 
-            this.closeDate.DataPropertyName = "CloseDate";
-            this.closeDate.HeaderText = "CloseDate";
-            this.closeDate.Name = "closeDate";
-            this.closeDate.ReadOnly = true;
-            // 
-            // reopenDate
-            // 
-            this.reopenDate.DataPropertyName = "ReopenDate";
-            this.reopenDate.HeaderText = "ReopenDate";
-            this.reopenDate.Name = "reopenDate";
-            this.reopenDate.ReadOnly = true;
-            // 
-            // paidServicesInfo
-            // 
-            this.paidServicesInfo.DataPropertyName = "PaidServicesInfo";
-            this.paidServicesInfo.HeaderText = "PaidServicesInfo";
-            this.paidServicesInfo.Name = "paidServicesInfo";
-            this.paidServicesInfo.ReadOnly = true;
-            // 
-            // freeServicesInfo
-            // 
-            this.freeServicesInfo.DataPropertyName = "FreeServicesInfo";
-            this.freeServicesInfo.HeaderText = "FreeServicesInfo";
-            this.freeServicesInfo.Name = "freeServicesInfo";
-            this.freeServicesInfo.ReadOnly = true;
-            // 
-            // workingHours
-            // 
-            this.workingHours.DataPropertyName = "WorkingHours";
-            this.workingHours.HeaderText = "WorkingHours";
-            this.workingHours.Name = "workingHours";
-            this.workingHours.ReadOnly = true;
-            // 
-            // clarificationOfWorkingHours
-            // 
-            this.clarificationOfWorkingHours.DataPropertyName = "ClarificationOfWorkingHours";
-            this.clarificationOfWorkingHours.HeaderText = "ClarificationOfWorkingHours";
-            this.clarificationOfWorkingHours.Name = "clarificationOfWorkingHours";
-            this.clarificationOfWorkingHours.ReadOnly = true;
-            // 
-            // specialization
-            // 
-            this.specialization.DataPropertyName = "Specialization";
-            this.specialization.HeaderText = "Specialization";
-            this.specialization.Name = "specialization";
-            this.specialization.ReadOnly = true;
-            // 
-            // beneficialDrugPrescriptions
-            // 
-            this.beneficialDrugPrescriptions.DataPropertyName = "BeneficialDrugPrescriptions";
-            this.beneficialDrugPrescriptions.HeaderText = "BeneficialDrugPrescriptions";
-            this.beneficialDrugPrescriptions.Name = "beneficialDrugPrescriptions";
-            this.beneficialDrugPrescriptions.ReadOnly = true;
-            // 
-            // extraInfo
-            // 
-            this.extraInfo.DataPropertyName = "ExtraInfo";
-            this.extraInfo.HeaderText = "ExtraInfo";
-            this.extraInfo.Name = "extraInfo";
-            this.extraInfo.ReadOnly = true;
-            // 
-            // addressUnom
-            // 
-            this.addressUnom.DataPropertyName = "AddressUnom";
-            this.addressUnom.HeaderText = "AddressUnom";
-            this.addressUnom.Name = "addressUnom";
-            this.addressUnom.ReadOnly = true;
-            // 
-            // globalid
-            // 
-            this.globalid.DataPropertyName = "Globalid";
-            this.globalid.HeaderText = "Globalid";
-            this.globalid.Name = "globalid";
-            this.globalid.ReadOnly = true;
-            // 
-            // clinicBindingSource
-            // 
-            this.clinicBindingSource.DataSource = typeof(PolyclinicHelp.Clinic);
+            this.сlinicView.Visible = false;
+            this.сlinicView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.сlinicView_CellContentDoubleClick);
+            this.сlinicView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.СlinicView_KeyDown);
             // 
             // bindingNavigator
             // 
             this.bindingNavigator.AddNewItem = this.bindingNavigatorCountItem;
-            this.bindingNavigator.BindingSource = this.clinicBindingSource;
+            this.bindingNavigator.BindingSource = this.clinicSource;
             this.bindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -502,6 +256,7 @@
             this.bindingNavigator.Size = new System.Drawing.Size(606, 25);
             this.bindingNavigator.TabIndex = 2;
             this.bindingNavigator.Text = "bindingNavigator1";
+            this.bindingNavigator.Visible = false;
             // 
             // bindingNavigatorCountItem
             // 
@@ -590,11 +345,190 @@
             this.bindingNavigatorAddNewItem.Text = "Добавить";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.BindingNavigatorAddNewItem_Click);
             // 
+            // rowShowNumericUpDown
+            // 
+            this.rowShowNumericUpDown.Location = new System.Drawing.Point(272, 24);
+            this.rowShowNumericUpDown.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.rowShowNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.rowShowNumericUpDown.Name = "rowShowNumericUpDown";
+            this.rowShowNumericUpDown.Size = new System.Drawing.Size(39, 22);
+            this.rowShowNumericUpDown.TabIndex = 3;
+            this.rowShowNumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.rowShowNumericUpDown.ValueChanged += new System.EventHandler(this.RowShowNumericUpDown_ValueChanged);
+            // 
+            // clinicSource
+            // 
+            this.clinicSource.DataSource = typeof(PolyclinicHelp.Clinic);
+            // 
+            // rownumDataGridViewTextBoxColumn
+            // 
+            this.rownumDataGridViewTextBoxColumn.DataPropertyName = "Rownum";
+            this.rownumDataGridViewTextBoxColumn.HeaderText = "Rownum";
+            this.rownumDataGridViewTextBoxColumn.Name = "rownumDataGridViewTextBoxColumn";
+            // 
+            // shortNameDataGridViewTextBoxColumn
+            // 
+            this.shortNameDataGridViewTextBoxColumn.DataPropertyName = "ShortName";
+            this.shortNameDataGridViewTextBoxColumn.HeaderText = "ShortName";
+            this.shortNameDataGridViewTextBoxColumn.Name = "shortNameDataGridViewTextBoxColumn";
+            // 
+            // postalCodeDataGridViewTextBoxColumn
+            // 
+            this.postalCodeDataGridViewTextBoxColumn.DataPropertyName = "PostalCode";
+            this.postalCodeDataGridViewTextBoxColumn.HeaderText = "PostalCode";
+            this.postalCodeDataGridViewTextBoxColumn.Name = "postalCodeDataGridViewTextBoxColumn";
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            // 
+            // chiefNameDataGridViewTextBoxColumn
+            // 
+            this.chiefNameDataGridViewTextBoxColumn.DataPropertyName = "ChiefName";
+            this.chiefNameDataGridViewTextBoxColumn.HeaderText = "ChiefName";
+            this.chiefNameDataGridViewTextBoxColumn.Name = "chiefNameDataGridViewTextBoxColumn";
+            // 
+            // chiefPositionDataGridViewTextBoxColumn
+            // 
+            this.chiefPositionDataGridViewTextBoxColumn.DataPropertyName = "ChiefPosition";
+            this.chiefPositionDataGridViewTextBoxColumn.HeaderText = "ChiefPosition";
+            this.chiefPositionDataGridViewTextBoxColumn.Name = "chiefPositionDataGridViewTextBoxColumn";
+            // 
+            // chiefGenderDataGridViewTextBoxColumn
+            // 
+            this.chiefGenderDataGridViewTextBoxColumn.DataPropertyName = "ChiefGender";
+            this.chiefGenderDataGridViewTextBoxColumn.HeaderText = "ChiefGender";
+            this.chiefGenderDataGridViewTextBoxColumn.Name = "chiefGenderDataGridViewTextBoxColumn";
+            // 
+            // chiefPhoneDataGridViewTextBoxColumn
+            // 
+            this.chiefPhoneDataGridViewTextBoxColumn.DataPropertyName = "ChiefPhone";
+            this.chiefPhoneDataGridViewTextBoxColumn.HeaderText = "ChiefPhone";
+            this.chiefPhoneDataGridViewTextBoxColumn.Name = "chiefPhoneDataGridViewTextBoxColumn";
+            // 
+            // publicPhoneDataGridViewTextBoxColumn
+            // 
+            this.publicPhoneDataGridViewTextBoxColumn.DataPropertyName = "PublicPhone";
+            this.publicPhoneDataGridViewTextBoxColumn.HeaderText = "PublicPhone";
+            this.publicPhoneDataGridViewTextBoxColumn.Name = "publicPhoneDataGridViewTextBoxColumn";
+            // 
+            // faxDataGridViewTextBoxColumn
+            // 
+            this.faxDataGridViewTextBoxColumn.DataPropertyName = "Fax";
+            this.faxDataGridViewTextBoxColumn.HeaderText = "Fax";
+            this.faxDataGridViewTextBoxColumn.Name = "faxDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // closeFlagDataGridViewTextBoxColumn
+            // 
+            this.closeFlagDataGridViewTextBoxColumn.DataPropertyName = "CloseFlag";
+            this.closeFlagDataGridViewTextBoxColumn.HeaderText = "CloseFlag";
+            this.closeFlagDataGridViewTextBoxColumn.Name = "closeFlagDataGridViewTextBoxColumn";
+            // 
+            // closeReasonDataGridViewTextBoxColumn
+            // 
+            this.closeReasonDataGridViewTextBoxColumn.DataPropertyName = "CloseReason";
+            this.closeReasonDataGridViewTextBoxColumn.HeaderText = "CloseReason";
+            this.closeReasonDataGridViewTextBoxColumn.Name = "closeReasonDataGridViewTextBoxColumn";
+            // 
+            // closeDateDataGridViewTextBoxColumn
+            // 
+            this.closeDateDataGridViewTextBoxColumn.DataPropertyName = "CloseDate";
+            this.closeDateDataGridViewTextBoxColumn.HeaderText = "CloseDate";
+            this.closeDateDataGridViewTextBoxColumn.Name = "closeDateDataGridViewTextBoxColumn";
+            // 
+            // reopenDateDataGridViewTextBoxColumn
+            // 
+            this.reopenDateDataGridViewTextBoxColumn.DataPropertyName = "ReopenDate";
+            this.reopenDateDataGridViewTextBoxColumn.HeaderText = "ReopenDate";
+            this.reopenDateDataGridViewTextBoxColumn.Name = "reopenDateDataGridViewTextBoxColumn";
+            // 
+            // paidServicesInfoDataGridViewTextBoxColumn
+            // 
+            this.paidServicesInfoDataGridViewTextBoxColumn.DataPropertyName = "PaidServicesInfo";
+            this.paidServicesInfoDataGridViewTextBoxColumn.HeaderText = "PaidServicesInfo";
+            this.paidServicesInfoDataGridViewTextBoxColumn.Name = "paidServicesInfoDataGridViewTextBoxColumn";
+            // 
+            // freeServicesInfoDataGridViewTextBoxColumn
+            // 
+            this.freeServicesInfoDataGridViewTextBoxColumn.DataPropertyName = "FreeServicesInfo";
+            this.freeServicesInfoDataGridViewTextBoxColumn.HeaderText = "FreeServicesInfo";
+            this.freeServicesInfoDataGridViewTextBoxColumn.Name = "freeServicesInfoDataGridViewTextBoxColumn";
+            // 
+            // workingHoursDataGridViewTextBoxColumn
+            // 
+            this.workingHoursDataGridViewTextBoxColumn.DataPropertyName = "WorkingHours";
+            this.workingHoursDataGridViewTextBoxColumn.HeaderText = "WorkingHours";
+            this.workingHoursDataGridViewTextBoxColumn.Name = "workingHoursDataGridViewTextBoxColumn";
+            // 
+            // clarificationOfWorkingHoursDataGridViewTextBoxColumn
+            // 
+            this.clarificationOfWorkingHoursDataGridViewTextBoxColumn.DataPropertyName = "ClarificationOfWorkingHours";
+            this.clarificationOfWorkingHoursDataGridViewTextBoxColumn.HeaderText = "ClarificationOfWorkingHours";
+            this.clarificationOfWorkingHoursDataGridViewTextBoxColumn.Name = "clarificationOfWorkingHoursDataGridViewTextBoxColumn";
+            // 
+            // specializationDataGridViewTextBoxColumn
+            // 
+            this.specializationDataGridViewTextBoxColumn.DataPropertyName = "Specialization";
+            this.specializationDataGridViewTextBoxColumn.HeaderText = "Specialization";
+            this.specializationDataGridViewTextBoxColumn.Name = "specializationDataGridViewTextBoxColumn";
+            // 
+            // beneficialDrugPrescriptionsDataGridViewTextBoxColumn
+            // 
+            this.beneficialDrugPrescriptionsDataGridViewTextBoxColumn.DataPropertyName = "BeneficialDrugPrescriptions";
+            this.beneficialDrugPrescriptionsDataGridViewTextBoxColumn.HeaderText = "BeneficialDrugPrescriptions";
+            this.beneficialDrugPrescriptionsDataGridViewTextBoxColumn.Name = "beneficialDrugPrescriptionsDataGridViewTextBoxColumn";
+            // 
+            // extraInfoDataGridViewTextBoxColumn
+            // 
+            this.extraInfoDataGridViewTextBoxColumn.DataPropertyName = "ExtraInfo";
+            this.extraInfoDataGridViewTextBoxColumn.HeaderText = "ExtraInfo";
+            this.extraInfoDataGridViewTextBoxColumn.Name = "extraInfoDataGridViewTextBoxColumn";
+            // 
+            // addressUnomDataGridViewTextBoxColumn
+            // 
+            this.addressUnomDataGridViewTextBoxColumn.DataPropertyName = "AddressUnom";
+            this.addressUnomDataGridViewTextBoxColumn.HeaderText = "AddressUnom";
+            this.addressUnomDataGridViewTextBoxColumn.Name = "addressUnomDataGridViewTextBoxColumn";
+            // 
+            // globalidDataGridViewTextBoxColumn
+            // 
+            this.globalidDataGridViewTextBoxColumn.DataPropertyName = "Globalid";
+            this.globalidDataGridViewTextBoxColumn.HeaderText = "Globalid";
+            this.globalidDataGridViewTextBoxColumn.Name = "globalidDataGridViewTextBoxColumn";
+            // 
+            // closeFileToolStripMenuItem
+            // 
+            this.closeFileToolStripMenuItem.Name = "closeFileToolStripMenuItem";
+            this.closeFileToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.closeFileToolStripMenuItem.Text = "Закрыть файл";
+            this.closeFileToolStripMenuItem.Click += new System.EventHandler(this.CloseFileToolStripMenuItem_Click);
+            // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(606, 375);
+            this.Controls.Add(this.rowShowNumericUpDown);
             this.Controls.Add(this.bindingNavigator);
             this.Controls.Add(this.сlinicView);
             this.Controls.Add(this.menuStrip);
@@ -603,14 +537,15 @@
             this.MinimumSize = new System.Drawing.Size(400, 300);
             this.Name = "StartForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Поликлиники";
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.сlinicView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clinicBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator)).EndInit();
             this.bindingNavigator.ResumeLayout(false);
             this.bindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rowShowNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clinicSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -619,52 +554,18 @@
         #endregion
 
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem создатьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem открытьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
-        private System.Windows.Forms.ToolStripMenuItem сохранитьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem сохранитькакToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem отменадействияToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem отменадействияToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem cutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripMenuItem выделитьвсеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ShowHideToolStripMenuItem;
         private System.Windows.Forms.DataGridView сlinicView;
         public System.Windows.Forms.DataGridView ClinicView => сlinicView;
-        private System.Windows.Forms.BindingSource clinicBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rownum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn shortName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn postalCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn chiefName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn chiefPosition;
-        private System.Windows.Forms.DataGridViewTextBoxColumn chiefGender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn chiefPhone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn publicPhone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fax;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn closeFlag;
-        private System.Windows.Forms.DataGridViewTextBoxColumn closeReason;
-        private System.Windows.Forms.DataGridViewTextBoxColumn closeDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn reopenDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn paidServicesInfo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn freeServicesInfo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn workingHours;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clarificationOfWorkingHours;
-        private System.Windows.Forms.DataGridViewTextBoxColumn specialization;
-        private System.Windows.Forms.DataGridViewTextBoxColumn beneficialDrugPrescriptions;
-        private System.Windows.Forms.DataGridViewTextBoxColumn extraInfo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addressUnom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn globalid;
         private System.Windows.Forms.BindingNavigator bindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -677,6 +578,66 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private static readonly string[] Headers =
+        {
+            "ROWNUM",
+            "ShortName",
+            "AdmArea",
+            "District",
+            "PostalCode",
+            "Address",
+            "ChiefName",
+            "ChiefPosition",
+            "ChiefGender",
+            "ChiefPhone",
+            "PublicPhone",
+            "Fax",
+            "Email",
+            "CloseFlag",
+            "CloseReason",
+            "CloseDate",
+            "ReopenDate",
+            "PaidServicesInfo",
+            "FreeServicesInfo",
+            "WorkingHours",
+            "ClarificationOfWorkingHours",
+            "Specialization",
+            "BeneficialDrugPrescriptions",
+            "ExtraInfo",
+            "AddressUnom",
+            "PointX",
+            "PointY",
+            "GlobalId"
+        };
+        private string currentFile;
+        private System.Windows.Forms.NumericUpDown rowShowNumericUpDown;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rownumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn shortNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn postalCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn chiefNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn chiefPositionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn chiefGenderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn chiefPhoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn publicPhoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn faxDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn closeFlagDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn closeReasonDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn closeDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reopenDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn paidServicesInfoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn freeServicesInfoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn workingHoursDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clarificationOfWorkingHoursDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn specializationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn beneficialDrugPrescriptionsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn extraInfoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressUnomDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn globalidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource clinicSource;
+        private System.Windows.Forms.ToolStripMenuItem closeFileToolStripMenuItem;
+        private bool fileOpened = false;
     }
 }
 

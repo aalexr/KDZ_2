@@ -12,21 +12,18 @@ namespace PolyclinicHelp
 
         private readonly StartForm _parentForm;
 
-        public SettingsForm(StartForm parentForm) : this()
-        {
-            _parentForm = parentForm;
-        }
+        public SettingsForm(StartForm parentForm) : this() => _parentForm = parentForm;
 
         private void SettingsForm_Load(object sender, EventArgs e)
         {
             for (var i = 0; i < _parentForm.ClinicView.ColumnCount; i++)
-                ShowContent.Items.Add(_parentForm.ClinicView.Columns[i].HeaderText, _parentForm.ClinicView.Columns[i].Visible);
+                ShowContent.Items.Add(item: _parentForm.ClinicView.Columns[i].HeaderText, isChecked: _parentForm.ClinicView.Columns[i].Visible);
         }
 
         private void ShowContent_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            if (sender is CheckedListBox checkedList && checkedList.SelectedItem != null && _parentForm
-                    ?.ClinicView?
+            if (sender is CheckedListBox checkedList && checkedList.SelectedItem != null && _parentForm?
+                    .ClinicView?
                     .Columns != null)
                 // ReSharper disable once PossibleNullReferenceException
                 _parentForm.ClinicView.Columns[(string)checkedList.SelectedItem].Visible =

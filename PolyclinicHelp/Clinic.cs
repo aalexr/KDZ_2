@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Globalization;
 // ReSharper disable MemberCanBePrivate.Global
 
@@ -11,6 +10,8 @@ namespace PolyclinicHelp
         /// Формат числа с плавающей точкой в файле
         /// </summary>
         private static readonly NumberFormatInfo DecimalStyle = new NumberFormatInfo { NumberDecimalSeparator = "." };
+
+        public Clinic() { }
 
         public Clinic(IReadOnlyList<string> row)
         {
@@ -49,38 +50,37 @@ namespace PolyclinicHelp
             }
             else
             {
-                // ToDo 
-                throw new Exception();
+                throw new Microsoft.VisualBasic.FileIO.MalformedLineException();
             }
         }
 
-        public int Rownum { get; private set; }
-        public string ShortName { get; private set; }
-        public int PostalCode { get; private set; }
-        public Address Address { get; private set; }
-        public string ChiefName { get; private set; }
-        public string ChiefPosition { get; private set; }
-        public string ChiefGender { get; private set; }
-        public string ChiefPhone { get; private set; }
-        public string PublicPhone { get; private set; }
-        public string Fax { get; private set; }
-        public string Email { get; private set; }
-        public string CloseFlag { get; private set; }
-        public string CloseReason { get; private set; }
-        public string CloseDate { get; private set; }
-        public string ReopenDate { get; private set; }
-        public string PaidServicesInfo { get; private set; }
-        public string FreeServicesInfo { get; private set; }
-        public string WorkingHours { get; private set; }
-        public string ClarificationOfWorkingHours { get; private set; }
-        public string Specialization { get; private set; }
-        public string BeneficialDrugPrescriptions { get; private set; }
-        public string ExtraInfo { get; private set; }
-        public string AddressUnom { get; private set; }
-        public int Globalid { get; private set; }
+        public int Rownum { get; set; }
+        public string ShortName { get; set; }
+        public int PostalCode { get; set; }
+        public Address Address { get; set; }
+        public string ChiefName { get; set; }
+        public string ChiefPosition { get; set; }
+        public string ChiefGender { get; set; }
+        public string ChiefPhone { get; set; }
+        public string PublicPhone { get; set; }
+        public string Fax { get; set; }
+        public string Email { get; set; }
+        public string CloseFlag { get; set; }
+        public string CloseReason { get; set; }
+        public string CloseDate { get; set; }
+        public string ReopenDate { get; set; }
+        public string PaidServicesInfo { get; set; }
+        public string FreeServicesInfo { get; set; }
+        public string WorkingHours { get; set; }
+        public string ClarificationOfWorkingHours { get; set; }
+        public string Specialization { get; set; }
+        public string BeneficialDrugPrescriptions { get; set; }
+        public string ExtraInfo { get; set; }
+        public string AddressUnom { get; set; }
+        public int Globalid { get; set; }
 
         public override string ToString() =>
-            $"{Rownum};\"{ShortName}\";\"{Address.AdmArea}\";\"{Address.District}\";{PostalCode};\"{Address.AddressString}\";\"{ChiefName}\";\"{ChiefPosition}\";\"{ChiefGender}\";\"{ChiefPhone}\";\"{PublicPhone}\";\"{Fax}\";\"{Email}\";\"{CloseFlag}\";\"{CloseReason}\";\"{CloseDate}\";\"{ReopenDate}\";\"{PaidServicesInfo}\";\"{FreeServicesInfo}\";\"{WorkingHours}\";\"{ClarificationOfWorkingHours}\";\"{Specialization}\";\"{BeneficialDrugPrescriptions}\";\"{ExtraInfo}\";\"{AddressUnom}\";{Address.PointX};{Address.PointY};{Globalid};";
+            $"{Rownum};\"{ShortName ?? string.Empty}\";\"{Address.AdmArea}\";\"{Address.District}\";{PostalCode};\"{Address.AddressString}\";\"{ChiefName}\";\"{ChiefPosition}\";\"{ChiefGender}\";\"{ChiefPhone}\";\"{PublicPhone}\";\"{Fax}\";\"{Email}\";\"{CloseFlag}\";\"{CloseReason}\";\"{CloseDate}\";\"{ReopenDate}\";\"{PaidServicesInfo}\";\"{FreeServicesInfo}\";\"{WorkingHours}\";\"{ClarificationOfWorkingHours}\";\"{Specialization}\";\"{BeneficialDrugPrescriptions}\";\"{ExtraInfo}\";\"{AddressUnom}\";{Address.PointX};{Address.PointY};{Globalid};";
     }
 
 }
