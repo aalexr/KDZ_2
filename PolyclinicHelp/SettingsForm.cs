@@ -26,8 +26,15 @@ namespace PolyclinicHelp
                     .ClinicView?
                     .Columns != null)
                 // ReSharper disable once PossibleNullReferenceException
-                _parentForm.ClinicView.Columns[(string)checkedList.SelectedItem].Visible =
+                try
+                {
+                    _parentForm.ClinicView.Columns[checkedList.SelectedIndex].Visible =
                     e.NewValue == CheckState.Checked;
+                }
+                catch (NullReferenceException)
+                {
+                    MessageBox.Show("Открыт ли файл?");
+                }
         }
     }
 }

@@ -1,16 +1,38 @@
-﻿namespace PolyclinicHelp
+﻿using System;
+
+namespace PolyclinicHelp
 {
     public class Address
     {
-        public string AdmArea { get; set; }
+        /// <summary>
+        /// Административный округ
+        /// </summary>
+        public string AdmArea { get; }
 
-        public string District { get; set; }
+        /// <summary>
+        /// Район
+        /// </summary>
+        public string District { get; }
 
-        public string AddressString { get; set; }
+        /// <summary>
+        /// Адрес
+        /// </summary>
+        public string AddressString { get; }
 
-        public double PointX { get; set; }
+        /// <summary>
+        /// Координата Х
+        /// </summary>
+        public double PointX { get; }
 
-        public double PointY { get; set; }
+        /// <summary>
+        /// Координата Y
+        /// </summary>
+        public double PointY { get; }
+
+        public Address()
+        {
+            AdmArea = District = AddressString = string.Empty;
+        }
 
         public Address(string admArea, string district, string addressString, double pointX, double pointY)
         {
@@ -21,6 +43,18 @@
             PointY = pointY;
         }
 
-        public override string ToString() => $"{PointX}, {PointY}, {AddressString} {AdmArea}";
+        /// <summary>
+        /// Вычисление расстояния до места по координатам
+        /// </summary>
+        /// <param name="x">Координата x</param>
+        /// <param name="y">Координата y</param>
+        /// <returns></returns>
+        public double Distance(double x, double y)
+        {
+            double dx = PointX - x, dy = PointY - y;
+            return Math.Sqrt(dx * dx + dy * dy);
+        }
+
+        public override string ToString() => $"{AdmArea},{District},{AddressString},{PointX},{PointY}";
     }
 }

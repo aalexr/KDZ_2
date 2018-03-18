@@ -1,6 +1,6 @@
 ﻿namespace PolyclinicHelp
 {
-    internal enum ClinicEnum
+    public enum ClinicEnum
     {
         Rownum,
         ShortName,

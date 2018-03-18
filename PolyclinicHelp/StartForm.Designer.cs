@@ -35,13 +35,17 @@
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.дописатьВToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.closeFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ShowHideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сlinicView = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.найтиБлижайшуюПоликлиникуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
@@ -54,7 +58,14 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.rowShowNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.filterLabel = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.postalCodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.shortNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clinicSource = new System.Windows.Forms.BindingSource(this.components);
             this.rownumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.shortNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,12 +91,11 @@
             this.extraInfoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressUnomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.globalidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.closeFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.сlinicView)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator)).BeginInit();
             this.bindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rowShowNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clinicSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,6 +106,7 @@
             this.openToolStripMenuItem,
             this.toolStripSeparator,
             this.saveToolStripMenuItem,
+            this.дописатьВToolStripMenuItem,
             this.saveAsToolStripMenuItem,
             this.toolStripSeparator1,
             this.closeFileToolStripMenuItem,
@@ -139,6 +150,13 @@
             this.saveToolStripMenuItem.Text = "&Сохранить";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
+            // дописатьВToolStripMenuItem
+            // 
+            this.дописатьВToolStripMenuItem.Name = "дописатьВToolStripMenuItem";
+            this.дописатьВToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.дописатьВToolStripMenuItem.Text = "Дописать в";
+            this.дописатьВToolStripMenuItem.Click += new System.EventHandler(this.дописатьВToolStripMenuItem_Click);
+            // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
@@ -152,6 +170,13 @@
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(222, 6);
+            // 
+            // closeFileToolStripMenuItem
+            // 
+            this.closeFileToolStripMenuItem.Name = "closeFileToolStripMenuItem";
+            this.closeFileToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.closeFileToolStripMenuItem.Text = "Закрыть файл";
+            this.closeFileToolStripMenuItem.Click += new System.EventHandler(this.CloseFileToolStripMenuItem_Click);
             // 
             // quitToolStripMenuItem
             // 
@@ -181,6 +206,7 @@
             // 
             // ShowHideToolStripMenuItem
             // 
+            this.ShowHideToolStripMenuItem.Enabled = false;
             this.ShowHideToolStripMenuItem.Name = "ShowHideToolStripMenuItem";
             this.ShowHideToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
             this.ShowHideToolStripMenuItem.Text = "&Показать/скрыть столбцы";
@@ -188,7 +214,8 @@
             // 
             // сlinicView
             // 
-            this.сlinicView.AllowUserToOrderColumns = true;
+            this.сlinicView.AllowUserToAddRows = false;
+            this.сlinicView.AllowUserToDeleteRows = false;
             this.сlinicView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -222,11 +249,27 @@
             this.сlinicView.DataSource = this.clinicSource;
             this.сlinicView.Location = new System.Drawing.Point(0, 52);
             this.сlinicView.Name = "сlinicView";
+            this.сlinicView.RowTemplate.ContextMenuStrip = this.contextMenuStrip1;
             this.сlinicView.Size = new System.Drawing.Size(606, 311);
             this.сlinicView.TabIndex = 1;
             this.сlinicView.Visible = false;
-            this.сlinicView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.сlinicView_CellContentDoubleClick);
-            this.сlinicView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.СlinicView_KeyDown);
+            this.сlinicView.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.сlinicView_CellBeginEdit);
+            this.сlinicView.CellValuePushed += new System.Windows.Forms.DataGridViewCellValueEventHandler(this.СlinicView_CellValuePushed);
+            this.сlinicView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.СlinicView_DataError);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.найтиБлижайшуюПоликлиникуToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(259, 26);
+            // 
+            // найтиБлижайшуюПоликлиникуToolStripMenuItem
+            // 
+            this.найтиБлижайшуюПоликлиникуToolStripMenuItem.Name = "найтиБлижайшуюПоликлиникуToolStripMenuItem";
+            this.найтиБлижайшуюПоликлиникуToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.найтиБлижайшуюПоликлиникуToolStripMenuItem.Text = "Найти ближайшую поликлинику";
+            this.найтиБлижайшуюПоликлиникуToolStripMenuItem.Click += new System.EventHandler(this.FindClosestToolStripMenuItem_Click);
             // 
             // bindingNavigator
             // 
@@ -245,7 +288,9 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem});
+            this.bindingNavigatorDeleteItem,
+            this.filterLabel,
+            this.toolStripDropDownButton1});
             this.bindingNavigator.Location = new System.Drawing.Point(0, 24);
             this.bindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -345,28 +390,65 @@
             this.bindingNavigatorAddNewItem.Text = "Добавить";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.BindingNavigatorAddNewItem_Click);
             // 
-            // rowShowNumericUpDown
+            // filterLabel
             // 
-            this.rowShowNumericUpDown.Location = new System.Drawing.Point(272, 24);
-            this.rowShowNumericUpDown.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.rowShowNumericUpDown.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.rowShowNumericUpDown.Name = "rowShowNumericUpDown";
-            this.rowShowNumericUpDown.Size = new System.Drawing.Size(39, 22);
-            this.rowShowNumericUpDown.TabIndex = 3;
-            this.rowShowNumericUpDown.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.rowShowNumericUpDown.ValueChanged += new System.EventHandler(this.RowShowNumericUpDown_ValueChanged);
+            this.filterLabel.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripTextBox1,
+            this.toolStripMenuItem2,
+            this.toolStripTextBox2});
+            this.filterLabel.Name = "filterLabel";
+            this.filterLabel.Size = new System.Drawing.Size(61, 22);
+            this.filterLabel.Text = "Фильтр";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Text = "По PaidServicesInfo";
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.toolStripTextBox1_KeyDown);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem2.Text = "По District";
+            // 
+            // toolStripTextBox2
+            // 
+            this.toolStripTextBox2.Name = "toolStripTextBox2";
+            this.toolStripTextBox2.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.toolStripTextBox2_KeyDown);
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.postalCodeToolStripMenuItem,
+            this.shortNameToolStripMenuItem});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(86, 22);
+            this.toolStripDropDownButton1.Text = "Сортировка";
+            // 
+            // postalCodeToolStripMenuItem
+            // 
+            this.postalCodeToolStripMenuItem.Name = "postalCodeToolStripMenuItem";
+            this.postalCodeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.postalCodeToolStripMenuItem.Text = "PostalCode";
+            this.postalCodeToolStripMenuItem.Click += new System.EventHandler(this.postalCodeToolStripMenuItem_Click);
+            // 
+            // shortNameToolStripMenuItem
+            // 
+            this.shortNameToolStripMenuItem.Name = "shortNameToolStripMenuItem";
+            this.shortNameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.shortNameToolStripMenuItem.Text = "ShortName";
             // 
             // clinicSource
             // 
@@ -392,6 +474,7 @@
             // 
             // addressDataGridViewTextBoxColumn
             // 
+            this.addressDataGridViewTextBoxColumn.ContextMenuStrip = this.contextMenuStrip1;
             this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
             this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
             this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
@@ -516,19 +599,11 @@
             this.globalidDataGridViewTextBoxColumn.HeaderText = "Globalid";
             this.globalidDataGridViewTextBoxColumn.Name = "globalidDataGridViewTextBoxColumn";
             // 
-            // closeFileToolStripMenuItem
-            // 
-            this.closeFileToolStripMenuItem.Name = "closeFileToolStripMenuItem";
-            this.closeFileToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.closeFileToolStripMenuItem.Text = "Закрыть файл";
-            this.closeFileToolStripMenuItem.Click += new System.EventHandler(this.CloseFileToolStripMenuItem_Click);
-            // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(606, 375);
-            this.Controls.Add(this.rowShowNumericUpDown);
             this.Controls.Add(this.bindingNavigator);
             this.Controls.Add(this.сlinicView);
             this.Controls.Add(this.menuStrip);
@@ -541,10 +616,10 @@
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.сlinicView)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator)).EndInit();
             this.bindingNavigator.ResumeLayout(false);
             this.bindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rowShowNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clinicSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -610,7 +685,16 @@
             "GlobalId"
         };
         private string currentFile;
-        private System.Windows.Forms.NumericUpDown rowShowNumericUpDown;
+        private System.Windows.Forms.BindingSource clinicSource;
+        public System.Windows.Forms.BindingSource ClinicSource
+        {
+            get => clinicSource;
+        }
+        private System.Windows.Forms.ToolStripMenuItem closeFileToolStripMenuItem;
+        private bool fileOpened = false;
+        private System.Windows.Forms.ToolStripMenuItem дописатьВToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem найтиБлижайшуюПоликлиникуToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn rownumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn shortNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn postalCodeDataGridViewTextBoxColumn;
@@ -635,9 +719,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn extraInfoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressUnomDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn globalidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource clinicSource;
-        private System.Windows.Forms.ToolStripMenuItem closeFileToolStripMenuItem;
-        private bool fileOpened = false;
+        private System.Windows.Forms.ToolStripDropDownButton filterLabel;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripMenuItem postalCodeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem shortNameToolStripMenuItem;
     }
 }
 

@@ -70,6 +70,60 @@ namespace PolyclinicHelp.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Файл пуст.
+        /// </summary>
+        internal static string StartForm_OpenToolStripMenuItem_Click_Empty_File {
+            get {
+                return ResourceManager.GetString("StartForm_OpenToolStripMenuItem_Click_Empty_File", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ошибка чтения файла.
+        /// </summary>
+        internal static string StartForm_OpenToolStripMenuItem_Click_Error_Reading_File {
+            get {
+                return ResourceManager.GetString("StartForm_OpenToolStripMenuItem_Click_Error_Reading_File", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Неверный файл.
+        /// </summary>
+        internal static string StartForm_OpenToolStripMenuItem_Click_Invalid_File {
+            get {
+                return ResourceManager.GetString("StartForm_OpenToolStripMenuItem_Click_Invalid_File", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Входной файл имел неверный формат. Открыть другой файл?.
+        /// </summary>
+        internal static string StartForm_OpenToolStripMenuItem_Click_Invalid_File__Open_Another {
+            get {
+                return ResourceManager.GetString("StartForm_OpenToolStripMenuItem_Click_Invalid_File__Open_Another", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Файл не открыт. Открыть?.
+        /// </summary>
+        internal static string StartForm_Save_File_Not_Opened__Openь_ {
+            get {
+                return ResourceManager.GetString("StartForm_Save_File_Not_Opened__Openь_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ошибка сохранения.
+        /// </summary>
+        internal static string StartForm_Save_Saving_Error {
+            get {
+                return ResourceManager.GetString("StartForm_Save_Saving_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Таблица CSV | *.csv.
         /// </summary>
         internal static string StartForm_SaveAsToolStripMenuItem_Click_Таблица_CSV_____csv {
