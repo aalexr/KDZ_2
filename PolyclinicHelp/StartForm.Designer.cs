@@ -63,9 +63,6 @@
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.postalCodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.shortNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clinicSource = new System.Windows.Forms.BindingSource(this.components);
             this.rownumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.shortNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -289,8 +286,7 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.filterLabel,
-            this.toolStripDropDownButton1});
+            this.filterLabel});
             this.bindingNavigator.Location = new System.Drawing.Point(0, 24);
             this.bindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -404,7 +400,7 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(179, 22);
             this.toolStripMenuItem1.Text = "По PaidServicesInfo";
             // 
             // toolStripTextBox1
@@ -416,7 +412,7 @@
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(179, 22);
             this.toolStripMenuItem2.Text = "По District";
             // 
             // toolStripTextBox2
@@ -424,31 +420,6 @@
             this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.Size = new System.Drawing.Size(100, 23);
             this.toolStripTextBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.toolStripTextBox2_KeyDown);
-            // 
-            // toolStripDropDownButton1
-            // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.postalCodeToolStripMenuItem,
-            this.shortNameToolStripMenuItem});
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(86, 22);
-            this.toolStripDropDownButton1.Text = "Сортировка";
-            // 
-            // postalCodeToolStripMenuItem
-            // 
-            this.postalCodeToolStripMenuItem.Name = "postalCodeToolStripMenuItem";
-            this.postalCodeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.postalCodeToolStripMenuItem.Text = "PostalCode";
-            this.postalCodeToolStripMenuItem.Click += new System.EventHandler(this.postalCodeToolStripMenuItem_Click);
-            // 
-            // shortNameToolStripMenuItem
-            // 
-            this.shortNameToolStripMenuItem.Name = "shortNameToolStripMenuItem";
-            this.shortNameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.shortNameToolStripMenuItem.Text = "ShortName";
             // 
             // clinicSource
             // 
@@ -724,9 +695,6 @@
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
-        private System.Windows.Forms.ToolStripMenuItem postalCodeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem shortNameToolStripMenuItem;
     }
 }
 

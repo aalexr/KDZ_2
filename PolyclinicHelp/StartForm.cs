@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Windows.Forms;
 using PolyclinicHelp.Properties;
 
@@ -234,7 +233,6 @@ namespace PolyclinicHelp
         private void СlinicView_CellValuePushed(object sender, DataGridViewCellValueEventArgs e)
         {
             ((Clinic)clinicSource.Current)[e.ColumnIndex] = e.Value;
-            // ToDO
         }
 
 
@@ -309,11 +307,6 @@ namespace PolyclinicHelp
                         ClinicView.Rows[i].Visible = false;
                 }
             }
-        }
-
-        private void postalCodeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            clinicSource.ApplySort(TypeDescriptor.GetProperties(ClinicView.Columns["PostalCode"])[0], ListSortDirection.Ascending);
         }
     }
 }

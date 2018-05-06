@@ -54,7 +54,6 @@
       <DependentUpon>AddressBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Clinic.cs" />
-    <Compile Include="ClinicEnum.cs" />
     <Compile Include="SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
